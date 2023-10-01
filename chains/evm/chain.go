@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ChainSafe/chainbridge-core/blockstore"
-	"github.com/ChainSafe/chainbridge-core/config/chain"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
+	"github.com/kookob/chainbridge-core/blockstore"
+	"github.com/kookob/chainbridge-core/config/chain"
+	"github.com/kookob/chainbridge-core/relayer/message"
 	"github.com/rs/zerolog/log"
 )
 

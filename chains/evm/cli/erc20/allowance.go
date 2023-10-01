@@ -1,10 +1,10 @@
 package erc20
 
 import (
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/flags"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/logger"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmtransaction"
+	"github.com/kookob/chainbridge-core/chains/evm/calls"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/flags"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/logger"
+	"github.com/kookob/chainbridge-core/chains/evm/evmtransaction"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 )

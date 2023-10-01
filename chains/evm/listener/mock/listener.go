@@ -9,9 +9,9 @@ import (
 	big "math/big"
 	reflect "reflect"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmclient"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
-	types "github.com/ChainSafe/chainbridge-core/types"
+	"github.com/kookob/chainbridge-core/chains/evm/evmclient"
+	"github.com/kookob/chainbridge-core/relayer/message"
+	types "github.com/kookob/chainbridge-core/types"
 	common "github.com/ethereum/go-ethereum/common"
 	gomock "github.com/golang/mock/gomock"
 )

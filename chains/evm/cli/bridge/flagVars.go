@@ -1,11 +1,11 @@
 package bridge
 
 import (
-	"github.com/ChainSafe/chainbridge-core/types"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kookob/chainbridge-core/types"
 )
 
-//flag vars
+// flag vars
 var (
 	Bridge          string
 	DataHash        string
@@ -21,7 +21,7 @@ var (
 	TokenContract   string
 )
 
-//processed flag vars
+// processed flag vars
 var (
 	bridgeAddr         common.Address
 	resourceIdBytesArr types.ResourceID

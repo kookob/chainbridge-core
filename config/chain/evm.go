@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls/consts"
+	"github.com/kookob/chainbridge-core/chains/evm/calls/consts"
 )
 
 type SharedEVMConfig struct {

@@ -4,10 +4,10 @@
 package cmd
 
 import (
-	evmCLI "github.com/ChainSafe/chainbridge-core/chains/evm/cli"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/local"
-	"github.com/ChainSafe/chainbridge-core/config"
-	"github.com/ChainSafe/chainbridge-core/e2e/evm-evm/example/app"
+	evmCLI "github.com/kookob/chainbridge-core/chains/evm/cli"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/local"
+	"github.com/kookob/chainbridge-core/config"
+	"github.com/kookob/chainbridge-core/e2e/evm-evm/example/app"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 )

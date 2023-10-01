@@ -7,7 +7,7 @@ package mock_relayer
 import (
 	reflect "reflect"
 
-	message "github.com/ChainSafe/chainbridge-core/relayer/message"
+	message "github.com/kookob/chainbridge-core/relayer/message"
 	gomock "github.com/golang/mock/gomock"
 )
 

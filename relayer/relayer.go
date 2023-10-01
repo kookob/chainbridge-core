@@ -6,7 +6,7 @@ package relayer
 import (
 	"fmt"
 
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
+	"github.com/kookob/chainbridge-core/relayer/message"
 	"github.com/rs/zerolog/log"
 )
 

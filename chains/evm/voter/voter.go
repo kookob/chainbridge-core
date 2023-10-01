@@ -11,14 +11,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls/consts"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/voter/proposal"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	ethereumTypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/kookob/chainbridge-core/chains/evm/calls"
+	"github.com/kookob/chainbridge-core/chains/evm/calls/consts"
+	"github.com/kookob/chainbridge-core/chains/evm/voter/proposal"
+	"github.com/kookob/chainbridge-core/relayer/message"
 	"github.com/rs/zerolog/log"
 )
 

@@ -7,7 +7,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ChainSafe/chainbridge-core/types"
+	"github.com/kookob/chainbridge-core/types"
 )
 
 type TransferType string

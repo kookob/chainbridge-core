@@ -3,9 +3,9 @@ package erc721
 import (
 	"math/big"
 
-	"github.com/ChainSafe/chainbridge-core/crypto/secp256k1"
-	"github.com/ChainSafe/chainbridge-core/types"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kookob/chainbridge-core/crypto/secp256k1"
+	"github.com/kookob/chainbridge-core/types"
 )
 
 // flag vars

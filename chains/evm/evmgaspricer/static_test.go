@@ -7,7 +7,7 @@ import (
 
 	"github.com/golang/mock/gomock"
 
-	mock_evmgaspricer "github.com/ChainSafe/chainbridge-core/chains/evm/evmgaspricer/mock"
+	mock_evmgaspricer "github.com/kookob/chainbridge-core/chains/evm/evmgaspricer/mock"
 	"github.com/stretchr/testify/suite"
 )
 

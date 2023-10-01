@@ -11,11 +11,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls/consts"
-	"github.com/ChainSafe/chainbridge-core/crypto/secp256k1"
-	"github.com/ChainSafe/chainbridge-core/keystore"
+	"github.com/kookob/chainbridge-core/chains/evm/calls/consts"
+	"github.com/kookob/chainbridge-core/crypto/secp256k1"
+	"github.com/kookob/chainbridge-core/keystore"
 
-	bridgeTypes "github.com/ChainSafe/chainbridge-core/types"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
@@ -25,6 +24,7 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/ethereum/go-ethereum/ethclient/gethclient"
 	"github.com/ethereum/go-ethereum/rpc"
+	bridgeTypes "github.com/kookob/chainbridge-core/types"
 	"github.com/rs/zerolog/log"
 )
 
@@ -264,7 +264,7 @@ func (c *EVMClient) From() common.Address {
 func (c *EVMClient) SignAndSendTransaction(ctx context.Context, tx CommonTransaction) (common.Hash, error) {
 	id, err := c.ChainID(ctx)
 	if err != nil {
-		//panic(err)
+		// panic(err)
 		// Probably chain does not support chainID eg. CELO
 		id = nil
 	}

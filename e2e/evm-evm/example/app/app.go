@@ -8,17 +8,17 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmclient"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmgaspricer"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmtransaction"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/listener"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/voter"
-	"github.com/ChainSafe/chainbridge-core/config"
-	"github.com/ChainSafe/chainbridge-core/lvldb"
-	"github.com/ChainSafe/chainbridge-core/opentelemetry"
-	"github.com/ChainSafe/chainbridge-core/relayer"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kookob/chainbridge-core/chains/evm"
+	"github.com/kookob/chainbridge-core/chains/evm/evmclient"
+	"github.com/kookob/chainbridge-core/chains/evm/evmgaspricer"
+	"github.com/kookob/chainbridge-core/chains/evm/evmtransaction"
+	"github.com/kookob/chainbridge-core/chains/evm/listener"
+	"github.com/kookob/chainbridge-core/chains/evm/voter"
+	"github.com/kookob/chainbridge-core/config"
+	"github.com/kookob/chainbridge-core/lvldb"
+	"github.com/kookob/chainbridge-core/opentelemetry"
+	"github.com/kookob/chainbridge-core/relayer"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
 )
@@ -32,7 +32,7 @@ func Run() error {
 		panic(err)
 	}
 
-	//EVM1 setup
+	// EVM1 setup
 	evm1Client := evmclient.NewEVMClient()
 	err = evm1Client.Configurate(viper.GetString(config.ChainConfigFlagName), "config_evm1.json")
 	if err != nil {
@@ -57,7 +57,7 @@ func Run() error {
 	}
 	evm1Chain := evm.NewEVMChain(evm1Listener, evmeVoter, db, *evm1Cfg.SharedEVMConfig.GeneralChainConfig.Id, &evm1Cfg.SharedEVMConfig)
 
-	////EVM2 setup
+	// //EVM2 setup
 	evm2Client := evmclient.NewEVMClient()
 	err = evm2Client.Configurate(viper.GetString(config.ChainConfigFlagName), "config_evm2.json")
 	if err != nil {

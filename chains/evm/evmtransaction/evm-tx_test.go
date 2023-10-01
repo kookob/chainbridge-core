@@ -4,12 +4,12 @@ import (
 	"math/big"
 	"testing"
 
-	mock_evmgaspricer "github.com/ChainSafe/chainbridge-core/chains/evm/evmgaspricer/mock"
-	"github.com/ChainSafe/chainbridge-core/keystore"
 	"github.com/ethereum/go-ethereum/core/types"
+	mock_evmgaspricer "github.com/kookob/chainbridge-core/chains/evm/evmgaspricer/mock"
+	"github.com/kookob/chainbridge-core/keystore"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmgaspricer"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kookob/chainbridge-core/chains/evm/evmgaspricer"
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/suite"

@@ -5,14 +5,14 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmclient"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/listener"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
+	"github.com/kookob/chainbridge-core/chains/evm/evmclient"
+	"github.com/kookob/chainbridge-core/chains/evm/listener"
+	"github.com/kookob/chainbridge-core/relayer/message"
 
-	mock_listener "github.com/ChainSafe/chainbridge-core/chains/evm/listener/mock"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
 	"github.com/golang/mock/gomock"
+	mock_listener "github.com/kookob/chainbridge-core/chains/evm/listener/mock"
 	"github.com/stretchr/testify/suite"
 )
 

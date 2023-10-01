@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/flags"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/logger"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmclient"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kookob/chainbridge-core/chains/evm/calls"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/flags"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/logger"
+	"github.com/kookob/chainbridge-core/chains/evm/evmclient"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 )

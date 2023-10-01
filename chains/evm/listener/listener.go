@@ -8,17 +8,17 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ChainSafe/chainbridge-core/blockstore"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmclient"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
-	"github.com/ChainSafe/chainbridge-core/types"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kookob/chainbridge-core/blockstore"
+	"github.com/kookob/chainbridge-core/chains/evm/evmclient"
+	"github.com/kookob/chainbridge-core/relayer/message"
+	"github.com/kookob/chainbridge-core/types"
 
 	"github.com/rs/zerolog/log"
 )
 
 var BlockRetryInterval = time.Second * 5
-var BlockDelay = big.NewInt(10) //TODO: move to config
+var BlockDelay = big.NewInt(10) // TODO: move to config
 
 type EventHandler interface {
 	HandleEvent(sourceID, destID uint8, nonce uint64, resourceID types.ResourceID, calldata, handlerResponse []byte) (*message.Message, error)
@@ -82,7 +82,7 @@ func (l *EVMListener) ListenToEvents(startBlock *big.Int, domainID uint8, kvrw b
 					log.Debug().Str("block", startBlock.String()).Uint8("domainID", domainID).Msg("Queried block for deposit events")
 				}
 				// TODO: We can store blocks to DB inside listener or make listener send something to channel each block to save it.
-				//Write to block store. Not a critical operation, no need to retry
+				// Write to block store. Not a critical operation, no need to retry
 				err = blockstore.StoreBlock(kvrw, startBlock, domainID)
 				if err != nil {
 					log.Error().Str("block", startBlock.String()).Err(err).Msg("Failed to write latest block to blockstore")

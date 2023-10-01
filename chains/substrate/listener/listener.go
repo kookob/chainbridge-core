@@ -7,10 +7,10 @@ import (
 
 	"github.com/status-im/keycard-go/hexutils"
 
-	"github.com/ChainSafe/chainbridge-core/blockstore"
-	"github.com/ChainSafe/chainbridge-core/chains/substrate"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
 	"github.com/centrifuge/go-substrate-rpc-client/types"
+	"github.com/kookob/chainbridge-core/blockstore"
+	"github.com/kookob/chainbridge-core/chains/substrate"
+	"github.com/kookob/chainbridge-core/relayer/message"
 	"github.com/rs/zerolog/log"
 )
 

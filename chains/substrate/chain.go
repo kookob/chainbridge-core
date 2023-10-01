@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ChainSafe/chainbridge-core/blockstore"
-	"github.com/ChainSafe/chainbridge-core/config/chain"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
+	"github.com/kookob/chainbridge-core/blockstore"
+	"github.com/kookob/chainbridge-core/config/chain"
+	"github.com/kookob/chainbridge-core/relayer/message"
 	"github.com/rs/zerolog/log"
 )
 
@@ -40,7 +40,7 @@ func NewSubstrateChain(listener EventListener, writer ProposalVoter, kvdb blocks
 func (c *SubstrateChain) PollEvents(stop <-chan struct{}, sysErr chan<- error, eventsChan chan *message.Message) {
 	log.Info().Msg("Polling Blocks...")
 	// Handler chain specific configs and flags
-	//b, err := blockstore.GetLastStoredBlock(c.kvdb, c.domainID)
+	// b, err := blockstore.GetLastStoredBlock(c.kvdb, c.domainID)
 	block, err := blockstore.SetupBlockstore(&c.config.GeneralChainConfig, c.kvdb, c.config.StartBlock)
 	if err != nil {
 		sysErr <- fmt.Errorf("error %w on getting last stored block", err)

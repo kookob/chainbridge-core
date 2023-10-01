@@ -6,11 +6,11 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls/consts"
-	"github.com/ChainSafe/chainbridge-core/types"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kookob/chainbridge-core/chains/evm/calls/consts"
+	"github.com/kookob/chainbridge-core/types"
 	"github.com/rs/zerolog/log"
 )
 

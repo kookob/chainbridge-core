@@ -5,11 +5,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls/consts"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmclient"
-	"github.com/ChainSafe/chainbridge-core/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/golang/mock/gomock"
+	"github.com/kookob/chainbridge-core/chains/evm/calls/consts"
+	"github.com/kookob/chainbridge-core/chains/evm/evmclient"
+	"github.com/kookob/chainbridge-core/types"
 	"github.com/stretchr/testify/suite"
 )
 

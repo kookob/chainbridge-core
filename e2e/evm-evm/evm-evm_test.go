@@ -3,9 +3,9 @@ package main
 import (
 	"testing"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/local"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmtransaction"
-	"github.com/ChainSafe/chainbridge-core/e2e/evm"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/local"
+	"github.com/kookob/chainbridge-core/chains/evm/evmtransaction"
+	"github.com/kookob/chainbridge-core/e2e/evm"
 	"github.com/stretchr/testify/suite"
 )
 

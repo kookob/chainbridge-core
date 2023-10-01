@@ -5,12 +5,12 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/local"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmclient"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmgaspricer"
-	"github.com/ChainSafe/chainbridge-core/crypto/secp256k1"
-	"github.com/ChainSafe/chainbridge-core/keystore"
+	"github.com/kookob/chainbridge-core/chains/evm/calls"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/local"
+	"github.com/kookob/chainbridge-core/chains/evm/evmclient"
+	"github.com/kookob/chainbridge-core/chains/evm/evmgaspricer"
+	"github.com/kookob/chainbridge-core/crypto/secp256k1"
+	"github.com/kookob/chainbridge-core/keystore"
 
 	substrateTypes "github.com/centrifuge/go-substrate-rpc-client/types"
 	"github.com/ethereum/go-ethereum/common"
@@ -129,7 +129,7 @@ func (s *IntegrationTestSuite) TestErc721Deposit() {
 	_, err = calls.Deposit(s.client, s.fabric1, s.gasPricer, s.bridgeAddr, s.erc721RID, 2, data)
 	s.Nil(err)
 
-	//Wait 120 seconds for relayer vote
+	// Wait 120 seconds for relayer vote
 	time.Sleep(120 * time.Second)
 
 	// Check on evm1 that token is burned
@@ -154,7 +154,7 @@ func (s *IntegrationTestSuite) TestErc20Deposit() {
 	_, err = calls.Deposit(s.client, s.fabric1, s.gasPricer, s.bridgeAddr, s.erc20RID, 2, data)
 	s.Nil(err)
 
-	//Wait 120 seconds for relayer vote
+	// Wait 120 seconds for relayer vote
 	time.Sleep(120 * time.Second)
 
 	senderBalAfter, err := calls.GetERC20Balance(s.client, s.erc20ContractAddr, s.adminKey.CommonAddress())
@@ -163,7 +163,7 @@ func (s *IntegrationTestSuite) TestErc20Deposit() {
 
 	destBalanceAfter, err := calls.GetERC20Balance(s.client2, s.erc20ContractAddr, dstAddr)
 	s.Nil(err)
-	//Balance has increased
+	// Balance has increased
 	s.Equal(1, destBalanceAfter.Cmp(destBalanceBefore))
 }
 

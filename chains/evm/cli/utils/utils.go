@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/calls"
-	"github.com/ChainSafe/chainbridge-core/chains/evm/evmgaspricer"
+	"github.com/kookob/chainbridge-core/chains/evm/calls"
+	"github.com/kookob/chainbridge-core/chains/evm/evmgaspricer"
 
 	"github.com/spf13/cobra"
 
@@ -33,17 +33,17 @@ func (es EventSig) GetTopic() common.Hash {
 }
 
 //
-//func IsActive(status uint8) bool {
+// func IsActive(status uint8) bool {
 //	return ProposalStatus(status) == Active
-//}
+// }
 //
-//func IsPassed(status uint8) bool {
+// func IsPassed(status uint8) bool {
 //	return ProposalStatus(status) == Passed
-//}
+// }
 //
-//func IsExecuted(status uint8) bool {
+// func IsExecuted(status uint8) bool {
 //	return ProposalStatus(status) == Executed
-//}
+// }
 
 // UserAmountToWei converts decimal user friendly representation of token amount to 'Wei' representation with provided amount of decimal places
 // eg UserAmountToWei(1, 5) => 100000

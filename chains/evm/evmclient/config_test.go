@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ChainSafe/chainbridge-core/config/chain"
+	"github.com/kookob/chainbridge-core/config/chain"
 )
 
 func TestLoadJSONConfig(t *testing.T) {
@@ -113,7 +113,7 @@ func TestParseChainConfigWithNoBlockConfirmations(t *testing.T) {
 	}
 }
 
-//TestChainConfigOneContract Tests chain config providing only one contract
+// TestChainConfigOneContract Tests chain config providing only one contract
 func TestChainConfigOneContract(t *testing.T) {
 
 	generalConfig := createGeneralConfig()
@@ -192,7 +192,7 @@ func createTempConfigFile() (*os.File, *RawEVMConfig) {
 			Bridge:             "0x1234"},
 	}
 	tmpFile, err := ioutil.TempFile(".", "*.json")
-	//fmt.Println(*generalCfg.Id)
+	// fmt.Println(*generalCfg.Id)
 	if err != nil {
 		fmt.Println("Cannot create temporary file", "err", err)
 		os.Exit(1)

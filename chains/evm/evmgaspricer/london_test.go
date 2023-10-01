@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	mock_evmgaspricer "github.com/ChainSafe/chainbridge-core/chains/evm/evmgaspricer/mock"
 	"github.com/golang/mock/gomock"
+	mock_evmgaspricer "github.com/kookob/chainbridge-core/chains/evm/evmgaspricer/mock"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -60,7 +60,7 @@ func (s *LondonGasPriceTestSuite) TestLondonGasPricerWithUpperLimitLowerBaseFee(
 	thirtyGwei := big.NewInt(30000000000)
 	gpd := NewLondonGasPriceClient(s.gasPricerMock, &GasPricerOpts{UpperLimitFeePerGas: twentyGwei})
 	s.gasPricerMock.EXPECT().BaseFee().Return(thirtyGwei, nil)
-	//s.gasPricerMock.EXPECT().SuggestGasTipCap(gomock.Any()).Return(twoGwei, nil) // Code is not get to the point where this call happens
+	// s.gasPricerMock.EXPECT().SuggestGasTipCap(gomock.Any()).Return(twoGwei, nil) // Code is not get to the point where this call happens
 
 	res, err := gpd.GasPrice()
 	s.Nil(err)

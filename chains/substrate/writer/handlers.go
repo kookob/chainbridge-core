@@ -3,8 +3,8 @@ package writer
 import (
 	"math/big"
 
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
 	"github.com/centrifuge/go-substrate-rpc-client/types"
+	"github.com/kookob/chainbridge-core/relayer/message"
 )
 
 func CreateFungibleProposal(m *message.Message) []interface{} {

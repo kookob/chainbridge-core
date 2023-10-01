@@ -3,8 +3,8 @@ package account
 import (
 	"bytes"
 
-	"github.com/ChainSafe/chainbridge-core/chains/evm/cli/flags"
-	accountutils "github.com/ChainSafe/chainbridge-core/keystore/account"
+	"github.com/kookob/chainbridge-core/chains/evm/cli/flags"
+	accountutils "github.com/kookob/chainbridge-core/keystore/account"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 )

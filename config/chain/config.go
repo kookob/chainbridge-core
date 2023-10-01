@@ -3,7 +3,7 @@ package chain
 import (
 	"fmt"
 
-	"github.com/ChainSafe/chainbridge-core/config"
+	"github.com/kookob/chainbridge-core/config"
 	"github.com/spf13/viper"
 )
 
@@ -22,7 +22,7 @@ type GeneralChainConfig struct {
 func (c *GeneralChainConfig) Validate() error {
 	// viper defaults to 0 for not specified ints, but we must have a valid domain id
 	// Previous method of checking used a string cast like below
-	//domainId := string(c.Id)
+	// domainId := string(c.Id)
 	if c.Id == nil {
 		return fmt.Errorf("required field domain.Id empty for chain %v", c.Id)
 	}

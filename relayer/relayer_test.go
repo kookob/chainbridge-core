@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
-	mock_relayer "github.com/ChainSafe/chainbridge-core/relayer/mock"
 	"github.com/golang/mock/gomock"
+	"github.com/kookob/chainbridge-core/relayer/message"
+	mock_relayer "github.com/kookob/chainbridge-core/relayer/mock"
 	"github.com/stretchr/testify/suite"
 )
 

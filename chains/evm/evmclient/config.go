@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ChainSafe/chainbridge-core/config/chain"
-	"github.com/ChainSafe/chainbridge-core/crypto/secp256k1"
+	"github.com/kookob/chainbridge-core/config/chain"
+	"github.com/kookob/chainbridge-core/crypto/secp256k1"
 	"github.com/spf13/viper"
 )
 

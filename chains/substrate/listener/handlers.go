@@ -3,9 +3,9 @@ package listener
 import (
 	"fmt"
 
-	"github.com/ChainSafe/chainbridge-core/chains/substrate"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
-	"github.com/ChainSafe/chainbridge-core/types"
+	"github.com/kookob/chainbridge-core/chains/substrate"
+	"github.com/kookob/chainbridge-core/relayer/message"
+	"github.com/kookob/chainbridge-core/types"
 )
 
 func FungibleTransferHandler(sourceID uint8, evtI interface{}) (*message.Message, error) {
@@ -13,7 +13,7 @@ func FungibleTransferHandler(sourceID uint8, evtI interface{}) (*message.Message
 	if !ok {
 		return nil, fmt.Errorf("failed to cast EventFungibleTransfer type")
 	}
-	//recipient := []byte{evt.Recipient[:]}
+	// recipient := []byte{evt.Recipient[:]}
 	return &message.Message{
 		Source:       sourceID,
 		Destination:  uint8(evt.Destination),

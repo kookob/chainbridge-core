@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ChainSafe/chainbridge-core/chains/substrate"
-	"github.com/ChainSafe/chainbridge-core/relayer/message"
-	"github.com/ChainSafe/chainbridge-core/types"
 	substrateTypes "github.com/centrifuge/go-substrate-rpc-client/types"
+	"github.com/kookob/chainbridge-core/chains/substrate"
+	"github.com/kookob/chainbridge-core/relayer/message"
+	"github.com/kookob/chainbridge-core/types"
 	"github.com/rs/zerolog/log"
 )
 
@@ -125,13 +125,13 @@ func (w *SubstrateWriter) createProposal(sourceChain uint8, depositNonce uint64,
 		return nil, err
 	}
 	// TODO: Is not these should be always enabled?
-	//if w.extendCall {
+	// if w.extendCall {
 	//	eRID, err := types.EncodeToBytes(resourceId)
 	//	if err != nil {
 	//		return nil, err
 	//	}
 	//	call.Args = append(call.Args, eRID...)
-	//}
+	// }
 	return &SubstrateProposal{
 		DepositNonce: substrateTypes.U64(depositNonce),
 		Call:         call,
