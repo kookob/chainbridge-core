@@ -18,7 +18,7 @@ import (
 )
 
 var BlockRetryInterval = time.Second * 5
-var BlockDelay = big.NewInt(10) // TODO: move to config
+var BlockDelay = big.NewInt(1) // TODO: move to config
 
 type EventHandler interface {
 	HandleEvent(sourceID, destID uint8, nonce uint64, resourceID types.ResourceID, calldata, handlerResponse []byte) (*message.Message, error)
@@ -77,7 +77,7 @@ func (l *EVMListener) ListenToEvents(startBlock *big.Int, domainID uint8, kvrw b
 					log.Debug().Msgf("Resolved message %+v in block %s", m, startBlock.String())
 					ch <- m
 				}
-				if startBlock.Int64()%20 == 0 {
+				if startBlock.Int64()%10 == 0 {
 					// Logging process every 20 bocks to exclude spam
 					log.Debug().Str("block", startBlock.String()).Uint8("domainID", domainID).Msg("Queried block for deposit events")
 				}
